@@ -1,0 +1,9 @@
+web:
+  build: .
+  volumes:
+    - .:/usr/src/app:rw
+  env_file:
+    - .docker.env
+  ports:
+    - "3000:3000"
+  command: ruby server.rb
