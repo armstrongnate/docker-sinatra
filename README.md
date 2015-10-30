@@ -46,15 +46,15 @@ Your server is now running on port 3000 of your docker ip which you can get from
 `make ip` from within the `boot2docker-xhyve` directory. It will probably look something
 like `http://192.168.64.2:3000/users`.
 
-### Notes
+## Notes
 
-## Stopping the server
+### Stopping the server
 
 ```
 docker-compose stop
 ```
 
-## Reloading changes
+### Reloading changes
 
 The starter pack uses the `rerun` gem which will automatically reload when there are
 changes to `server.rb`. Changes to any other files will require a
