@@ -56,6 +56,10 @@ docker-compose stop
 
 ### Reloading changes
 
-The starter pack uses the `rerun` gem which will automatically reload when there are
-changes to `server.rb`. Changes to any other files will require a
-`docker-compose stop` and `docker-compose up` before the changes are applied.
+The `rerun` gem is
+[supposed to help with changes automatically being reloaded](http://www.sinatrarb.com/faq.html#reloading)
+but I don't think it is working the way it should. The main `server.rb` file is
+using [Sinatra Reloader](http://www.sinatrarb.com/contrib/reloader.html) so any changes
+to `server.rb` should get picked up. But changes to other files will require a
+`docker-compose stop` and `docker-compose start` which is not ideal.
+
