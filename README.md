@@ -34,7 +34,7 @@ curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose
 
 ### Build the docker image
 ```
-docker-compose builld
+docker-compose build
 ```
 
 ### Start the server
@@ -42,13 +42,19 @@ docker-compose builld
 docker-compose up
 ```
 
-### Stopping the server
+Your server is now running on port 3000 of your docker ip which you can get from running
+`make ip` from within the `boot2docker-xhyve` directory. It will probably look something
+like `http://192.168.64.2:3000/users`.
+
+### Notes
+
+## Stopping the server
 
 ```
 docker-compose stop
 ```
 
-### Reloading changes
+## Reloading changes
 
 The starter pack uses the `rerun` gem which will automatically reload when there are
 changes to `server.rb`. Changes to any other files will require a
